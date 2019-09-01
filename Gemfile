@@ -7,6 +7,7 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.1'
 gem 'will_paginate', '~> 3.1.1'
 gem 'will_paginate-bootstrap' 
+gem "font-awesome-rails"
 # Use postgresql as the database for Active Record
 # gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
