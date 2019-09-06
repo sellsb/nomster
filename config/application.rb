@@ -1,13 +1,15 @@
 require_relative 'boot'
 
+
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-
+ include Pagy::Backend
 module Nomster
   class Application < Rails::Application
+    config.action_controller.permit_all_parameters = true
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
@@ -17,6 +19,7 @@ module Nomster
     # the framework and any gems in your application.
 
         # Add the fonts path
+
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
     # Precompile additional assets
