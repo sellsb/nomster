@@ -11,6 +11,7 @@ gem "font-awesome-rails"
 gem 'pagy', '~> 3.5' # omit patch digit and use the latest if possible
 # Use postgresql as the database for Active Record
 # gem 'bootstrap', '~> 4.3.1'
+gem 'devise'
 gem 'jquery-rails'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
