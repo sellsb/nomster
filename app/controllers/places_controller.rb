@@ -1,6 +1,5 @@
- include Pagy::Backend
 class PlacesController < ApplicationController
-  # before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
     @places = Place.all
@@ -16,7 +15,11 @@ class PlacesController < ApplicationController
   end
 
   def show
-      @place = Place.find(params[:id])
+    @place = Place.find(params[:id])
+  end
+
+  def edit
+    @place = Place.find(params[:id])
   end
 
   private
@@ -24,4 +27,4 @@ class PlacesController < ApplicationController
   def place_params
     params.require(:place).permit(:name, :description, :address)
   end
-end 
+end
