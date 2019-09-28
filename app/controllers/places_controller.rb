@@ -2,10 +2,10 @@
   class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit]
   # a bunch of other code
-  end
+  
 
 
-  # before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
     @places = Place.all
