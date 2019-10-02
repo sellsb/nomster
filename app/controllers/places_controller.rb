@@ -5,7 +5,7 @@
   
 
 
-  before_action :authenticate_user!, only: [:new, :create]
+  # before_action :authenticate_user!, only: [:new, :create]
 
   def index
     @places = Place.all
@@ -46,7 +46,9 @@ end
   if @place.valid?
     redirect_to root_path
   else
-
+  if @place.user != current_user
+    return render plain: 'Not Allowed', status: :forbidden
+  end
 
     render :edit, status: :unprocessable_entity
   end
