@@ -19,3 +19,4 @@ production:
   database: nomster_production
   # username: nomster
   # password: <%= ENV['NOMSTER_DATABASE_PASSWORD'] %>
+GEOCODER_API_KEY: AIzaSyBzbT...b5aIveL_zY

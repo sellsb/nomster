@@ -8,6 +8,8 @@ gem 'rails', '~> 5.2.1'
 gem 'will_paginate', '~> 3.1.1'
 gem 'will_paginate-bootstrap' 
 gem "font-awesome-rails"
+gem "geocoder"
+gem  "figaro"
 gem 'pagy', '~> 3.5' # omit patch digit and use the latest if possible
 # Use postgresql as the database for Active Record
 # gem 'bootstrap', '~> 4.3.1'
@@ -20,7 +22,7 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
+# See https://github/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem 'simple_form'
 # Use CoffeeScript for .coffee assets and views
