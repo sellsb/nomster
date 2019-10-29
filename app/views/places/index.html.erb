@@ -9,11 +9,22 @@
       <small><%= place.user.email %></small>
     <% end %>
   </div>
- 
-
-<hr />
-
+<% if place.comments.present? %>
+ <div class="col-12">
+  <div class = "col-10">
+    <blockquote>
+      <% if place.comments.last.rating.present? %>
+        <b><%= place.comments.last.rating %></b> -
+      <% end %>
+      <%= place.comments.last.message %>
+      <small><%= place.comments.last.user.email %></small>
+    </blockquote>
+  </div>
+  <% end %>
+</div>
 <% end %>
+
+
  
 <!-- <div class="@font-awesome col-11 offset-1"> -->
 
