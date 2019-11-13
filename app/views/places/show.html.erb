@@ -88,10 +88,24 @@
 </div>
 </div>
 <div class ="row">
-  <div class="col-10 offset-1">
-<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-        
+<% @place.photo.each do |photo| %>
+<div class="col-12 col-sm-6">
+  <div class = "col-10">
+    <blockquote>
+      <% if photo.picture.present? %>
+        <b><%= photo.caption %></b> 
+        <%= image_tag photo.picture.url %>
+        <% end %>
+      
+    </blockquote>
+  </div>
+<% end %>
+</div>
+<div class ="row">
+  <div class="col-10 offset-2">
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
           <%= f.input :caption %>
+          <%= f.input :picture %>
           <%= f.submit "Add a photo", class: 'btn btn-primary' %>
        </div>
 <% end %>
