@@ -10,6 +10,8 @@ gem 'will_paginate-bootstrap'
 gem "font-awesome-rails"
 gem "geocoder"
 gem  "figaro"
+gem 'fog-aws'
+gem 'fog',  '1.41'
 gem 'carrierwave', '~> 1.0'
 gem 'pagy', '~> 3.5' # omit patch digit and use the latest if possible
 # Use postgresql as the database for Active Record
