@@ -2,7 +2,7 @@
 # 	 belongs_to :user
 #   	 belongs_to :place
 # end
-class Photo < ActiveRecord::Base
+class Photo < ApplicationRecord
   mount_uploader :picture, PictureUploader
   belongs_to :user
   belongs_to :place
